@@ -125,6 +125,9 @@ namespace Binance.Net
         private const string OpenMarginOrdersEndpoint = "margin/openOrders";
         private const string QueryMarginOrderEndpoint = "margin/order";
 
+        // Futures Transfers
+        private const string FuturesTransferEndpoint = "futures/transfer";
+
         // Lending
         private const string FlexibleProductListEndpoint = "lending/daily/product/list";
         private const string LeftDailyPurchaseQuotaEndpoint = "lending/daily/userLeftQuota";
@@ -3094,7 +3097,7 @@ namespace Binance.Net
             };
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? defaultReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
 
-            return await SendRequest<BinanceMarginTransaction>(GetUrl(MarginTransferEndpoint, MarginApi, MarginVersion), HttpMethod.Post, ct, parameters, true).ConfigureAwait(false);
+            return await SendRequest<BinanceMarginTransaction>(GetUrl(FuturesTransferEndpoint, MarginApi, MarginVersion), HttpMethod.Post, ct, parameters, true).ConfigureAwait(false);
         }
 
         #endregion
