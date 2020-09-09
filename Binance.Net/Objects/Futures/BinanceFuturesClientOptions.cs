@@ -78,7 +78,7 @@ namespace Binance.Net.Objects.Futures
         /// <summary>
         /// The base address for combined data in socket connections
         /// </summary>
-        public string BaseSocketCombinedAddress { get; set; } = "wss://fstream.binance.com/";
+        public string BaseSocketCombinedAddress { get; set; } = "wss://fstream3.binance.com/";
 
         /// <summary>
         /// The amount of subscriptions that should be made on a single socket connection. Not all exchanges support multiple subscriptions on a single socket.
@@ -98,7 +98,7 @@ namespace Binance.Net.Objects.Futures
         /// <summary>
         /// ctor
         /// </summary>
-        public BinanceFuturesSocketClientOptions(): base("wss://fstream.binance.com/ws/")
+        public BinanceFuturesSocketClientOptions(): base("wss://fstream3.binance.com/ws/")
         {
         }  
 
