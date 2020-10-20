@@ -17,7 +17,7 @@ namespace Binance.Net.Objects.Spot
         /// <summary>
         /// Interval for refreshing the auto timestamp calculation
         /// </summary>
-        public TimeSpan AutoTimestampRecalculationInterval { get; set; } = TimeSpan.FromHours(3);
+        public TimeSpan AutoTimestampRecalculationInterval { get; set; } = TimeSpan.FromHours(1);
 
         /// <summary>
         /// A manual offset for the timestamp. Should only be used if AutoTimestamp and regular time synchronization on the OS is not reliable enough
